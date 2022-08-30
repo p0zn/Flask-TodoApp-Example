@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="static/css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Register Todo App</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="img" style="background-image: url(static/images/bg-2.png);">
+			      </div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Register</h3>
+			      		</div>
+			      	</div>
+                      <form action="" method="POST" class="signin-form">
+                        {{form.hidden_tag()}}
+                  <fieldset class="form-group">
+                    <div class="form-group">
+
+                        {{form.username.label(class="form-control-label")}}
+                        {{form.username(class="form-control form-control-lg")}}
+                    </div>
+
+                    <div class="form-group">
+                        {{form.email.label(class="form-control-label")}}
+                        {{form.email(class="form-control form-control-lg")}}
+                    </div>
+
+                    <div class="form-group">
+                        {{form.password.label(class="form-control-label")}}
+                        {{form.password(class="form-control form-control-lg")}}
+                    </div>
+
+                    <div class="form-group">
+                        {{form.confirm_password.label(class="form-control-label")}}
+                        {{form.confirm_password(class="form-control form-control-lg")}}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info")}}
+                </div>
+
+              </form>
+		          <p class="text-center">Do you have an account? <a data-toggle="tab" href="{{ url_for('login')}}">Login Here</a></p>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</body>
+</html>
+
